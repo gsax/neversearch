@@ -1,8 +1,5 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 #encoding: utf-8
-
-# Python 3 support
-from __future__ import print_function
 
 
 VERBOSE = False
@@ -95,8 +92,7 @@ def _import_gen(f):
 if __name__ == '__main__':
     import argparse
 
-    parser = argparse.ArgumentParser(description='Neversearch',
-        version='0.02')
+    parser = argparse.ArgumentParser(description='Neversearch')
     parser.add_argument('file', help='', nargs='*')
     parser.add_argument('-a', '--add', help='Add a tag', action='append',
         default=[])
@@ -120,7 +116,7 @@ if __name__ == '__main__':
         dest='imp', default=None)
     parser.add_argument('-p', '--prefix', help='Prefix for xattr', type=str,
         default='tags')
-    parser.add_argument('-V', '--verbose', help='Verbose mode', action='store_true')
+    parser.add_argument('-v', '--verbose', help='Verbose mode', action='store_true')
 
     a = parser.parse_args()
 
